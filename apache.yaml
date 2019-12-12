@@ -6,6 +6,20 @@
     yum :
       name: httpd
       state: present
+   - name: install unzip 
+    yum:
+      name: unzip
+      state: present
+  - name: send the zip to remote server
+    copy:
+      src: suresh2-build.zip
+      dest: /tmp/
+  - name: unzip the file in remote server
+    unarchive:
+      src: /tmp/suresh2-build.zip
+      dest: /var/www/html/
+      remote_src: yes
+
   - name: start service
     service:  
       name: httpd
@@ -15,4 +29,6 @@
       name: httpd
       enabled: yes
 
-         
+    
+
+
