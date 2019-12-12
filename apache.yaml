@@ -12,11 +12,11 @@
       state: present
   - name: send the zip to remote server
     copy:
-      src: suresh2-$build_number.zip
+      src: flamix-$build_number.zip
       dest: /tmp/
   - name: unzip the file in remote server
     unarchive:
-      src: /tmp/suresh2-$build_number.zip
+      src: /tmp/flamix-$build_number.zip
       dest: /var/www/html/
       remote_src: yes
 
