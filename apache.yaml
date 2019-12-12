@@ -24,10 +24,7 @@
     service:  
       name: httpd
       state: restarted
-  - name: enable service
-    service:
-      name: httpd
-      enabled: yes
+  
 
     
 
