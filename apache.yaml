@@ -23,7 +23,7 @@
   - name: start service
     service:  
       name: httpd
-      state: started
+      state: restarted
   - name: enable service
     service:
       name: httpd
