@@ -6,7 +6,7 @@
     yum :
       name: httpd
       state: present
-   - name: install unzip 
+  - name: install unzip 
     yum:
       name: unzip
       state: present
